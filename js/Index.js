@@ -1,3 +1,4 @@
+//Escribir nombre de Paises en mayuscula
 let nombreUsuario = prompt("ingrese su nombre y apellido");
 let array = [
   { id: "Argentina", IVA: 0.21 },
@@ -5,7 +6,7 @@ let array = [
   { id: "Chile", IVA: 0.19 },
   { id: "Colombia", IVA: 0.16 },
 ];
-let nombrePais = ["Argentina", "Brasil", "Chile", "Colombia"];
+
 
 //nombre de usuario diferente a vacio
 if (!nombreUsuario == " ") {
@@ -17,18 +18,14 @@ if (!nombreUsuario == " ") {
     alert("usted califica para la solicitud de prestamo");
     let pais = prompt("Ingrese su pais de residencia");
     //ingresa un pais y si es diferente a vacio y si no cumple con algun nombre del array
-    for (i = 0; i <= nombrePais.length; i++) {
-      if (pais === nombrePais[i]) {
-        const filter = array.filter(function (array) {
-          return array.id == pais;
-        });
+    for (i = 0; i <= array.length; i++) {
+      if (pais == array[i].id) {
+        let IVA = array[i].IVA;
         let montoElegido = prompt("Ingrese monto deseado a solicitar");
         let precioParse = parseFloat(montoElegido);
-        let valorFinal = precioParse * filter.IVA;
-        alert(
-          "El monto a pagar es: " + valorFinal + " y el IVA es: " + filter.IVA
-        );
-      } else {
+        let valorFinal = precioParse * IVA;
+        alert("El monto a pagar es: " + valorFinal + " y el IVA es: " + IVA);
+      } else if (!pais == array[i].id) {
         alert(
           "recarge la pagina y elija uno de los siguientes paises (Argentina,Brasil,Chile,Colombia)"
         );
