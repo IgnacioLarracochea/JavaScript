@@ -41,21 +41,21 @@ if (!nombreUsuario == " ") {
 
 */
 
- const datos = document.getElementById("envio");
- const envioForm = (event) => { 
+const datos = document.getElementById("envio");
+const envioForm = (event) => { 
 
- event.preventDefault()
- const name = document.getElementById("name").value 
- const dni = document.getElementById("dni").value 
- const edad = document.getElementById("edad").value 
- const pais = document.getElementById("pais").value 
- const prestamo = document.getElementById("prestamo").value
+event.preventDefault()
+const name = document.getElementById("name").value 
+const dni = document.getElementById("dni").value 
+const edad = document.getElementById("edad").value 
+const pais = document.getElementById("pais").value 
+const prestamo = document.getElementById("prestamo").value
 
- console.log(name)
- console.log(dni)
- console.log(edad)
- console.log(pais)
- console.log(prestamo)
+console.log(name)
+console.log(dni)
+console.log(edad)
+console.log(pais)
+console.log(prestamo)
 
 } 
 
